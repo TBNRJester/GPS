@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  </head>
+
+  <body style="margin: 0; overflow: hidden;">
+    <a-scene embedded renderer="logarithmicDepthBuffer: true;" arjs="sourceType: webcam; trackingMethod: best; debugUIEnabled: false;" vr-mode-ui="enabled: false">
+
+      <a-camera gps-camera rotation-reader></a-camera>
+
+      <!-- Stop 1 -->
+	  <a-assets>
+			<a-asset-item id="myModel" src="Extruded.glb"></a-asset-item>
+		</a-assets>
+<a-entity gltf-model="#myModel" gps-entity-place="latitude: 39.27994719398742; longitude -84.27479704652066;"></a-entity>
+	  <a-sphere
+            position="0 1 -5"
+            radius="1"
+            color="blue"
+			gps-entity-place="latitude: 39.28013574720079; longitude: -84.27557969103566>
+        </a-sphere>
+      <a-box
+         position="0 1 -5"
+            depth="2"
+            height="2"
+            width="2"
+            color="tomato"
+        gps-entity-place="latitude: 39.27943216179038; longitude: -84.2757240404563;"
+      ></a-box>
+    </a-scene>
+  </body>
+</html>
